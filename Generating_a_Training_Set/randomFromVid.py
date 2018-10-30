@@ -20,7 +20,7 @@ def extract_ims(seq,n_ims,p_save=None):
         p_save=p_load
     print('Saving to {}'.format(p_save))    
     V = pims.open(seq)
-    if os.path.splitext(seq)[1]=='seq':
+    if os.path.splitext(seq)[1]=='.seq':
         nframes = V.header_dict['allocated_frames']
     else:
         nframes= V.get_metadata()['nframes']
